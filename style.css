@@ -127,6 +127,7 @@ h2{
 .stage {
   height: 320vh ; /* 画面3つ分の高さ */
   position: relative;
+  margin-bottom: 20px;
 }
 
 /* 中の要素を画面中央にピン留めする */
@@ -171,5 +172,5 @@ h2{
 
 .skill__text{
     transform: translate(40px , 0);
-    width: 200px;
+    width: 300px;
 }
