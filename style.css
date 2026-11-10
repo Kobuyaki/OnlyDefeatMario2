@@ -1,0 +1,175 @@
+body{
+  font-family: "M PLUS U", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.mainwrap {
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* 画面中央に配置 */
+}
+
+/* PC用の外側背景エリア */
+.BACKGROUND {
+    background-color: black;
+    width: calc(100% - 600px); /* スマホコンテナ以外の余白部分を埋める */
+}
+
+/* スマホ表示メインコンテンツ */
+.main {
+    background-color: white;
+    width: 100%;
+    max-width: 480px; /* PCでもスマホ幅（480px）に固定 */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.main img{
+    width: 100%;
+    height: auto;
+}
+
+.about {
+    width: 100%;
+}
+
+.BACKGROUND img{
+    position: fixed;
+    top: 100px;
+    left: calc(100% - 600px);
+    width: 30%;
+}
+.BACKGROUND h1{
+    position: fixed;
+    bottom: 10px;
+    left: calc(100% - 600px + 100px);
+    width: 30%;
+    color: white;
+}
+
+/* スマホ画面時の表示切り替え */
+@media screen and (max-width: 480px) { 
+    .BACKGROUND {
+        display: none;    
+    }
+    
+    .main {
+        max-width: 100%; /* スマホ実機では画面いっぱいに表示 */
+    }
+    .BACKGROUND img{
+        display: none;
+    }
+}
+
+.title{
+    margin: 0 0 20px 0;
+}
+
+.title h1{
+    margin: 0;
+}
+
+.title p{
+    margin: 0;
+}
+
+h2{
+    margin: 20px 0 0 0;
+}
+
+.stage__contents{
+    background-color: rgb(181, 181, 181);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+    height: auto;
+}
+
+
+
+/* 親要素を高くして、スクロールする「長さ（時間）」を稼ぐ */
+.stage {
+  height: 300vh; /* 画面3つ分の高さ */
+  position: relative;
+}
+
+/* 中の要素を画面中央にピン留めする */
+.stage__contents {
+  position: sticky;
+  top: 0;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: #fff 2px solid;
+}
+
+
+.stage__hidden{
+    height: 0;
+    overflow: hidden;
+}
+
+
+.skill__contents h2{
+    background-color: white;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+.skill__contents h2 span{
+    position: absolute;
+    color: white;
+    z-index: 5;
+}
+
+.skill__contents h2::before{
+    content: '';
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: translate(-4px , -2px);
+    z-index: 0;
+}
+
+.skill__text{
+    transform: translate(40px , 0);
+    width: 100px;
+}
