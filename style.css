@@ -125,7 +125,7 @@ h2{
 
 /* 親要素を高くして、スクロールする「長さ（時間）」を稼ぐ */
 .stage {
-  height: 300vh; /* 画面3つ分の高さ */
+  height: 320vh ; /* 画面3つ分の高さ */
   position: relative;
 }
 
@@ -171,5 +171,5 @@ h2{
 
 .skill__text{
     transform: translate(40px , 0);
-    width: 100px;
+    width: 200px;
 }
