@@ -42,20 +42,20 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center; /* 画面中央に配置 */
+    justify-content: center; 
 }
 
-/* PC用の外側背景エリア */
+
 .BACKGROUND {
     background-color: black;
-    width: calc(100% - 600px); /* スマホコンテナ以外の余白部分を埋める */
+    width: calc(100% - 600px); 
 }
 
-/* スマホ表示メインコンテンツ */
+
 .main {
     background-color: white;
     width: 100%;
-    max-width: 480px; /* PCでもスマホ幅（480px）に固定 */
+    max-width: 480px; 
     box-sizing: border-box;
     padding: 20px;
 }
@@ -83,14 +83,14 @@ body {
     color: white;
 }
 
-/* スマホ画面時の表示切り替え */
+
 @media screen and (max-width: 480px) { 
     .BACKGROUND {
         display: none;    
     }
     
     .main {
-        max-width: 100%; /* スマホ実機では画面いっぱいに表示 */
+        max-width: 100%; 
     }
     .BACKGROUND img{
         display: none;
@@ -123,14 +123,14 @@ h2{
 
 
 
-/* 親要素を高くして、スクロールする「長さ（時間）」を稼ぐ */
+
 .stage {
-  height: 320vh ; /* 画面3つ分の高さ */
+  height: 320vh ; 
   position: relative;
   margin-bottom: 20px;
 }
 
-/* 中の要素を画面中央にピン留めする */
+
 .stage__contents {
   position: sticky;
   top: 0;
@@ -173,4 +173,28 @@ h2{
 .skill__text{
     transform: translate(40px , 0);
     width: 300px;
+}
+
+.unit__contents{
+    padding: 5px 5px 10px 5px;
+    background-color:   #bcd1ff;
+    /* box-shadow: rgb(97, 62, 62) 5px 5px; */
+    border-radius: 20px 5px 20px 5px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.unit__text{
+    display: inline;
+    margin: auto 0;
+}
+
+.unit__contents h2 span{
+    margin-left: 10px;
+    font-size: 64px;
+}
+
+.unit h2 , .unit p{
+    margin: 0;
 }
